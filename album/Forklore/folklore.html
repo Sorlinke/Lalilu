@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folklore - Spotify</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="folklore.css">
+</head>
+<body>
+    <div class="album-container">
+        <div class="album-header">
+            <div class="album-cover">
+                <img src="folklore album cover.jpg" alt="Album Cover">
+            </div>
+            <div class="album-info">
+                <div class="album-type">Album</div>
+                <h1 class="album-title">Folklore</h1>
+                <div class="album-meta">
+                    <span class="artist-name">Taylor Swift</span>
+                    <span>•</span>
+                    <span>2024</span>
+                    <span>•</span>
+                    <span>23 songs, 01 min ? sec</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="play-button">
+                <i class="fas fa-play fa-lg"></i>
+            </button>
+            <button class="action-button">
+                <i class="far fa-heart"></i>
+            </button>
+            <button class="action-button">
+                <i class="fas fa-ellipsis"></i>
+            </button>
+        </div>
+
+        <div class="tracks-container">
+            <div class="tracks-header">
+                <div>#</div>
+                <div>Title</div>
+                <div>Duration</div>
+            </div>
+
+            <!--List Lagu-->
+            <div class="track-row">
+                <div class="track-number">1</div>
+                <div class="track-title">Cardigan</div>
+                <div class="track-duration">2:58</div>
+            </div>
+
+            <div class="track-row">
+                <div class="track-number">2</div>
+                <div class="track-title">August</div>
+                <div class="track-duration">3:11</div>
+            </div>
+
+            <div class="track-row">
+                <div class="track-number">3</div>
+                <div class="track-title">Exile</div>
+                <div class="track-duration">3:04</div>
+            </div>
+
+            <div class="track-row">
+                <div class="track-number">4</div>
+                <div class="track-title">Mad Woman</div>
+                <div class="track-duration">4:14</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Player Modal Yang akan muncul-->
+    <div class="player-modal">
+        <div class="modal-album-cover">
+            <img src="folklore album cover.jpg" alt="Now Playing">
+        </div>
+        <div class="modal-track-info">
+            <div class="modal-track-title">Track Title</div>
+            <div class="modal-artist">Taylor Swift</div>
+            <div class="audio-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="modal-controls">
+            <button class="modal-play-button">
+                <i class="fas fa-play fa-sm"></i>
+            </button>
+        </div>
+        <audio id="audio-player" src=""></audio>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+    <hr>
+    <br><br><br><br>
+
+
+    <section class="photo-grid">
+        <div class="container">
+            <div class="header">
+                <img src="foto/bakar-bakar (29).jpg" 
+                    alt="Profile" class="profile-img">
+                
+                <div class="small-text-container">
+                    <p class="small-text">Bakar-bakar tahun baru, walau ga pas tahun baru</p>
+                </div>
+    
+                <h1 class="title">Memories</h1>
+            </div>
+    
+            <div id="gallery">
+                <!-- Ganti src dengan link gambar yang diinginkan -->
+                <img src="foto/bakar-bakar (1).jpg" alt="Memory 1">
+<img src="foto/bakar-bakar (2).jpg" alt="Memory 2">
+<img src="foto/bakar-bakar (3).jpg" alt="Memory 3">
+<img src="foto/bakar-bakar (4).jpg" alt="Memory 4">
+<img src="foto/bakar-bakar (5).jpg" alt="Memory 5">
+<img src="foto/bakar-bakar (6).jpg" alt="Memory 6">
+<img src="foto/bakar-bakar (7).jpg" alt="Memory 7">
+<img src="foto/bakar-bakar (8).jpg" alt="Memory 8">
+<img src="foto/bakar-bakar (9).jpg" alt="Memory 9">
+<img src="foto/bakar-bakar (10).jpg" alt="Memory 10">
+<img src="foto/bakar-bakar (11).jpg" alt="Memory 11">
+<img src="foto/bakar-bakar (12).jpg" alt="Memory 12">
+<img src="foto/bakar-bakar (13).jpg" alt="Memory 13">
+<img src="foto/bakar-bakar (14).jpg" alt="Memory 14">
+<img src="foto/bakar-bakar (15).jpg" alt="Memory 15">
+<img src="foto/bakar-bakar (16).jpg" alt="Memory 16">
+<img src="foto/bakar-bakar (17).jpg" alt="Memory 17">
+<img src="foto/bakar-bakar (18).jpg" alt="Memory 18">
+<img src="foto/bakar-bakar (19).jpg" alt="Memory 19">
+<img src="foto/bakar-bakar (20).jpg" alt="Memory 20">
+<img src="foto/bakar-bakar (21).jpg" alt="Memory 21">
+<img src="foto/bakar-bakar (22).jpg" alt="Memory 22">
+<img src="foto/bakar-bakar (23).jpg" alt="Memory 23">
+<img src="foto/bakar-bakar (24).jpg" alt="Memory 24">
+<img src="foto/bakar-bakar (25).jpg" alt="Memory 25">
+<img src="foto/bakar-bakar (26).jpg" alt="Memory 26">
+<img src="foto/bakar-bakar (27).jpg" alt="Memory 27">
+<img src="foto/bakar-bakar (28).jpg" alt="Memory 28">
+<img src="foto/bakar-bakar (29).jpg" alt="Memory 29">
+<img src="foto/bakar-bakar (30).jpg" alt="Memory 30">
+<img src="foto/bakar-bakar (31).jpg" alt="Memory 31">
+<img src="foto/bakar-bakar (32).jpg" alt="Memory 32">
+<img src="foto/bakar-bakar (33).jpg" alt="Memory 33">
+<img src="foto/bakar-bakar (34).jpg" alt="Memory 34">
+<img src="foto/bakar-bakar (35).jpg" alt="Memory 35">
+
+                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Untuk Button Play muncul
+        const playButton = document.querySelector('.play-button');
+        let isPlaying = false;
+
+        playButton.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            playButton.innerHTML = isPlaying ? 
+                '<i class="fas fa-pause fa-lg"></i>' : 
+                '<i class="fas fa-play fa-lg"></i>';
+        });
+
+        // Untuk Button Like
+        const likeButton = document.querySelector('.fa-heart');
+        let isLiked = false;
+
+        likeButton.parentElement.addEventListener('click', () => {
+            isLiked = !isLiked;
+            likeButton.classList.toggle('far');
+            likeButton.classList.toggle('fas');
+            if (isLiked) {
+                likeButton.style.color = '#1ed760';
+            } else {
+                likeButton.style.color = '#b3b3b3';
+            }
+        });
+
+        // Biae ada effect nya
+        const trackRows = document.querySelectorAll('.track-row');
+        
+        trackRows.forEach(row => {
+            const numberElement = row.querySelector('.track-number');
+            const originalNumber = numberElement.textContent;
+            
+            row.addEventListener('mouseenter', () => {
+                numberElement.innerHTML = '<i class="fas fa-play"></i>';
+            });
+            
+            row.addEventListener('mouseleave', () => {
+                numberElement.textContent = originalNumber;
+            });
+
+            row.addEventListener('click', () => {
+                // Simulate track playing
+                trackRows.forEach(r => r.style.color = '');
+                row.style.color = '#1ed760';
+            });
+        });
+
+        // Add this new code for modal player functionality
+        const playerModal = document.querySelector('.player-modal');
+        const modalPlayButton = document.querySelector('.modal-play-button');
+        const audioPlayer = document.getElementById('audio-player');
+        const progressBar = document.querySelector('.progress-bar');
+        const modalTrackTitle = document.querySelector('.modal-track-title');
+        let currentTrack = null;
+
+
+
+        // Sample track data (in real application, this would come from your server)
+        const tracks = [
+            { title: "Cardigan", file: "Taylor Swift - cardigan.mp3" },
+            { title: "August", file: "Taylor Swift – august (Official Lyric Video) (1).mp3" },
+            { title: "Exile", file: "Taylor Swift – exile (feat. Bon Iver).mp3" },
+            { title: "Mad Woman", file: "Taylor Swift – mad woman.mp3" },
+        ];
+
+
+
+        // Modify track row click handler
+        trackRows.forEach((row, index) => {
+            row.addEventListener('click', () => {
+                currentTrack = tracks[index];
+                modalTrackTitle.textContent = currentTrack.title;
+                audioPlayer.src = currentTrack.file;
+                playerModal.classList.add('active');
+                audioPlayer.play();
+                modalPlayButton.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+            });
+        });
+
+        // Modal play button handler
+        modalPlayButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                modalPlayButton.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+            } else {
+                audioPlayer.pause();
+                modalPlayButton.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+            }
+        });
+
+        // Update progress bar
+        audioPlayer.addEventListener('timeupdate', () => {
+            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progressBar.style.width = `${progress}%`;
+        });
+
+        // Click on progress bar to seek
+        document.querySelector('.audio-progress').addEventListener('click', (e) => {
+            const progressBar = e.currentTarget;
+            const clickPosition = e.offsetX / progressBar.offsetWidth;
+            audioPlayer.currentTime = clickPosition * audioPlayer.duration;
+        });
+
+        // Handle audio end
+        audioPlayer.addEventListener('ended', () => {
+            modalPlayButton.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+            progressBar.style.width = '0%';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album 1989 - Spotify</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="1989.css">
+</head>
+<body>
+    <div class="album-container">
+        <div class="album-header">
+            <div class="album-cover">
+                <img src="1989.jpg" alt="Album Cover">
+            </div>
+            <div class="album-info">
+                <div class="album-type">Album</div>
+                <h1 class="album-title">1989</h1>
+                <div class="album-meta">
+                    <span class="artist-name">Taylor Swift</span>
+                    <span>•</span>
+                    <span>2024</span>
+                    <span>•</span>
+                    <span>22 songs, 12 min 5 sec</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="play-button">
+                <i class="fas fa-play fa-lg"></i>
+            </button>
+            <button class="action-button">
+                <i class="far fa-heart"></i>
+            </button>
+            <button class="action-button">
+                <i class="fas fa-ellipsis"></i>
+            </button>
+        </div>
+
+        <div class="tracks-container">
+            <div class="tracks-header">
+                <div>#</div>
+                <div>Title</div>
+                <div>Duration</div>
+            </div>
+
+            <!--List Lagu yg mau dimasukin-->
+            <div class="track-row">
+                <div class="track-number">1</div>
+                <div class="track-title">Blank Space</div>
+                <div class="track-duration">2:58</div>
+            </div>
+
+            <div class="track-row">
+                <div class="track-number">2</div>
+                <div class="track-title">Out Of The Woods</div>
+                <div class="track-duration">3:11</div>
+            </div>
+
+            <div class="track-row">
+                <div class="track-number">3</div>
+                <div class="track-title">Style</div>
+                <div class="track-duration">3:04</div>
+            </div>
+
+            <div class="track-row">
+                <div class="track-number">4</div>
+                <div class="track-title">This Love</div>
+                <div class="track-duration">4:14</div>
+            </div>
+
+            <div class="track-row">
+                <div class="track-number">5</div>
+                <div class="track-title">Welcome To New York</div>
+                <div class="track-duration">3:03</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Player Modal Yang akan muncul-->
+    <div class="player-modal">
+        <div class="modal-album-cover">
+            <img src="1989.jpg" alt="Now Playing">
+        </div>
+        <div class="modal-track-info">
+            <div class="modal-track-title">Track Title</div>
+            <div class="modal-artist">Taylor Swift</div>
+            <div class="audio-progress">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="modal-controls">
+            <button class="modal-play-button">
+                <i class="fas fa-play fa-sm"></i>
+            </button>
+        </div>
+        <audio id="audio-player" src=""></audio>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+    <hr>
+    <br><br><br><br>
+
+
+    <section class="photo-grid">
+        <div class="container">
+            <div class="header">
+                <img src="foto/1986 (1).jpg" 
+                    alt="Profile" class="profile-img">
+                
+                <div class="small-text-container">
+                    <p class="small-text">Ini juga sipaling suka ngerayain ulang tahun, udah kaya setiap hari ngerayain wkwkwk</p>
+                </div>
+    
+                <h1 class="title">Memories</h1>
+            </div>
+    
+            <div id="gallery">
+                <!-- Ganti src dengan link gambar yang diinginkan -->
+                <img src="foto/1986 (1).jpg" alt="Memory 1">
+                <img src="foto/1986 (2).jpg" alt="Memory 1">
+                <img src="foto/1986 (3).jpg" alt="Memory 1">
+                <img src="foto/1986 (4).jpg" alt="Memory 1">
+                <img src="foto/1986 (5).jpg" alt="Memory 1">
+                <img src="foto/1986 (6).jpg" alt="Memory 1">
+                <img src="foto/1986 (7).jpg" alt="Memory 1">
+                <img src="foto/1986 (8).jpg" alt="Memory 1">
+                <img src="foto/1986 (9).jpg" alt="Memory 1">
+                <img src="foto/1986 (10).jpg" alt="Memory 1">
+                <img src="foto/1986 (11).jpg" alt="Memory 1">
+                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Toggle play button icon
+        const playButton = document.querySelector('.play-button');
+        let isPlaying = false;
+
+        playButton.addEventListener('click', () => {
+            isPlaying = !isPlaying;
+            playButton.innerHTML = isPlaying ? 
+                '<i class="fas fa-pause fa-lg"></i>' : 
+                '<i class="fas fa-play fa-lg"></i>';
+        });
+
+        // Like button toggle
+        const likeButton = document.querySelector('.fa-heart');
+        let isLiked = false;
+
+        likeButton.parentElement.addEventListener('click', () => {
+            isLiked = !isLiked;
+            likeButton.classList.toggle('far');
+            likeButton.classList.toggle('fas');
+            if (isLiked) {
+                likeButton.style.color = '#1ed760';
+            } else {
+                likeButton.style.color = '#b3b3b3';
+            }
+        });
+
+        // Hover effect for track numbers
+        const trackRows = document.querySelectorAll('.track-row');
+        
+        trackRows.forEach(row => {
+            const numberElement = row.querySelector('.track-number');
+            const originalNumber = numberElement.textContent;
+            
+            row.addEventListener('mouseenter', () => {
+                numberElement.innerHTML = '<i class="fas fa-play"></i>';
+            });
+            
+            row.addEventListener('mouseleave', () => {
+                numberElement.textContent = originalNumber;
+            });
+
+            row.addEventListener('click', () => {
+                // Simulate track playing
+                trackRows.forEach(r => r.style.color = '');
+                row.style.color = '#1ed760';
+            });
+        });
+
+        // Add this new code for modal player functionality
+        const playerModal = document.querySelector('.player-modal');
+        const modalPlayButton = document.querySelector('.modal-play-button');
+        const audioPlayer = document.getElementById('audio-player');
+        const progressBar = document.querySelector('.progress-bar');
+        const modalTrackTitle = document.querySelector('.modal-track-title');
+        let currentTrack = null;
+
+        // Sample track data (in real application, this would come from your server)
+        const tracks = [
+            { title: "Blank Space", file: "Taylor Swift - Blank Space.mp3" },
+            { title: "Out of The Woods", file: "Taylor Swift - Out Of The Woods.mp3" },
+            { title: "Style", file: "Taylor Swift - Style.mp3" },
+            { title: "This Love", file: "Taylor Swift - This Love.mp3" },
+            { title: "Welcome To New York", file: "Taylor Swift - Welcome To New York.mp3" },
+        ];
+
+        // Modify track row click handler
+        trackRows.forEach((row, index) => {
+            row.addEventListener('click', () => {
+                currentTrack = tracks[index];
+                modalTrackTitle.textContent = currentTrack.title;
+                audioPlayer.src = currentTrack.file;
+                playerModal.classList.add('active');
+                audioPlayer.play();
+                modalPlayButton.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+            });
+        });
+
+        // Modal play button handler
+        modalPlayButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                modalPlayButton.innerHTML = '<i class="fas fa-pause fa-sm"></i>';
+            } else {
+                audioPlayer.pause();
+                modalPlayButton.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+            }
+        });
+
+        // Update progress bar
+        audioPlayer.addEventListener('timeupdate', () => {
+            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progressBar.style.width = `${progress}%`;
+        });
+
+        // Click on progress bar to seek
+        document.querySelector('.audio-progress').addEventListener('click', (e) => {
+            const progressBar = e.currentTarget;
+            const clickPosition = e.offsetX / progressBar.offsetWidth;
+            audioPlayer.currentTime = clickPosition * audioPlayer.duration;
+        });
+
+        // Handle audio end
+        audioPlayer.addEventListener('ended', () => {
+            modalPlayButton.innerHTML = '<i class="fas fa-play fa-sm"></i>';
+            progressBar.style.width = '0%';
+        });
+    </script>
+</body>
+</html>
